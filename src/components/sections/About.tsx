@@ -12,28 +12,32 @@ type FunFact = {
   fact: string;
 };
 
-type FunFactWithColor = FunFact & { gradient: string };
+type FunFactWithColor = FunFact & { gradient: string; image: string };
 
 const funFacts: FunFactWithColor[] = [
   {
-    title: "The Debug Marathon",
-    fact: "I once spent 6 hours hunting a bug that turned out to be a single wrong variable name. Zero regrets — I learned more in those 6 hours than in a week of lectures.",
+    title: "Marathon",
+    fact: "I'm a marathon finisher! My first one was the Jerusalem Marathon — 19 km of uphill climbs, 4°C temperatures, and a ton of rain. Crossing that finish line is something I'll never forget.",
     gradient: "from-[#915EFF] to-[#4B1FA8]",
+    image: "/marathon.jpeg",
   },
   {
-    title: "Paper Addict",
-    fact: "I've read more AI research papers this year than novels in my entire life. My bookmarks folder is basically a second degree.",
+    title: "Mechina",
+    fact: "Before my military service, I spent a year at a pre-army academy (Mechina) at Kibbutz Kfar HaNassi in the Upper Galilee. It was one of the most meaningful years of my life.",
     gradient: "from-[#00D4FF] to-[#0066CC]",
+    image: "/mechina.jpeg",
   },
   {
-    title: "Two Languages at Once",
-    fact: "I think in code and speak in metaphors. I can explain how a neural network works using only a pizza analogy — and it actually makes sense.",
+    title: "Paris Olympics 2024",
+    fact: "I played basketball for years and even got certified as a coach at the Wingate Institute. Sports are a huge part of who I am — a major highlight was flying to the Paris Olympics to watch the Dream Team live.",
     gradient: "from-[#FF6B6B] to-[#9B1515]",
+    image: "/sport.jpeg",
   },
   {
-    title: "Built From Scratch",
-    fact: "Every project I've ever been proud of started the same way: a blank file, a vague idea, and way too much coffee. The blank file always wins eventually.",
+    title: "Music",
+    fact: "I play both piano and guitar, and there's barely a moment in my day without music playing. My favorite artist is Dudu Tassa — look him up, you won't regret it.",
     gradient: "from-[#00FFA3] to-[#007A4E]",
+    image: "/music.jpeg",
   },
 ];
 
@@ -66,7 +70,7 @@ const Popup = ({
   fact,
   onClose,
 }: {
-  fact: FunFact | null;
+  fact: FunFactWithColor | null;
   onClose: () => void;
 }) =>
   createPortal(
@@ -101,13 +105,12 @@ const Popup = ({
               ✕
             </button>
 
-            {/* Image placeholder */}
-            <div className="mb-5 flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-white/20 bg-white/5">
-              <div className="flex flex-col items-center gap-2 text-white/30">
-                <span className="text-4xl">🖼️</span>
-                <span className="text-sm">Image coming soon</span>
-              </div>
-            </div>
+            {/* Image */}
+            <img
+              src={fact.image}
+              alt={fact.title}
+              className="mb-5 h-48 w-full rounded-xl object-cover"
+            />
 
             {/* Content */}
             <h3 className="mb-2 text-lg font-bold text-white">{fact.title}</h3>
@@ -122,7 +125,7 @@ const Popup = ({
   );
 
 const About = () => {
-  const [activeFact, setActiveFact] = useState<FunFact | null>(null);
+  const [activeFact, setActiveFact] = useState<FunFactWithColor | null>(null);
 
   return (
     <>
