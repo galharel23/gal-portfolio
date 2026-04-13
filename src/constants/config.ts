@@ -2,6 +2,7 @@ type TSection = {
   p: string;
   h2: string;
   content?: string;
+  content2?: string;
 };
 
 type TConfig = {
@@ -31,10 +32,10 @@ type TConfig = {
     };
   } & TSection;
   sections: {
-    about: Required<TSection>;
+    about: TSection & { content: string; content2: string };
     experience: TSection;
     feedbacks: TSection;
-    works: Required<TSection>;
+    works: TSection & { content: string };
   };
 };
 
@@ -46,7 +47,7 @@ export const config: TConfig = {
   },
   hero: {
     name: "Gal Harel",
-    p: ["I build reliable, maintainable,", "and modern AI-driven software"],
+    p: ["Turning complex logic into scalable, production-ready systems"],
   },
   contact: {
     p: "Get in touch",
@@ -67,7 +68,8 @@ export const config: TConfig = {
     about: {
       p: "Get to know me",
       h2: "About Me.",
-      content: `I'm a Computer Science student who genuinely enjoys building things — from backend systems that handle real load to AI tools that actually work. I've written production code across military, industry, and academic environments, and lately I've been deep into AI-driven development and blockchain research. I care a lot about clean architecture, and even more about software that solves real problems.`,
+      content: `I am a Computer Science student at Ben-Gurion University with few years of hands-on experience engineering high-impact software across military, industrial, and academic sectors. From developing mission-critical systems in Unit 9900 to architecting multiplayer blockchain platforms, I specialize in transforming complex logic into clean, production-grade code.`,
+      content2: `Beyond the stack, I am a driven team player with a strong desire to contribute to high-performing environments. I thrive on the synergy of collaborative development and am deeply motivated by the challenge of shaping products that solve real-world problems.`,
     },
     experience: {
       p: "What I have done so far",
@@ -80,7 +82,7 @@ export const config: TConfig = {
     works: {
       p: "My work",
       h2: "Projects.",
-      content: `These are projects I built because I found the problems genuinely interesting. They span AI-personalized learning, real-time multiplayer systems, and blockchain research — each one started from scratch and pushed me into new territory.`,
+      content: `This section is a look into the problems that keep me curious. These projects represent my journey through different technologies — from architecting RAG-based AI agents and real-time multiplayer systems to exploring the intricacies of blockchain research.\n\nEach project was built from the ground up, driven by a desire to solve complex challenges with clean, efficient code. I view every project as an opportunity to push technical boundaries and build something that truly works.`,
     },
   },
 };

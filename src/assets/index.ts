@@ -19,17 +19,16 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
-import python from "./tech/python.svg";
-import angular from "./tech/angular.svg";
-import csharp from "./tech/csharp.svg";
-import cplusplus from "./tech/cplusplus.svg";
-import java from "./tech/java.svg";
-import postgresql from "./tech/postgresql.svg";
-import unity from "./tech/unity.svg";
-import redis from "./tech/redis.svg";
-import rabbitmq from "./tech/rabbitmq.svg";
-import aws from "./tech/aws.svg";
+import python from "./tech/python.png";
+import angular from "./tech/angular.png";
+import csharp from "./tech/csharp.png";
+import cplusplus from "./tech/cplusplus.png";
+import java from "./tech/java.png";
+import postgresql from "./tech/postgres.png";
+import unity from "./tech/unity.png";
+import redis from "./tech/redis.png";
+import rabbitmq from "./tech/rabbitmq.png";
+import aws from "./tech/aws.png";
 
 import bgu from "./company/bgu.png";
 import comda from "./company/comda.png";
@@ -59,7 +58,6 @@ export {
   redux,
   tailwind,
   typescript,
-  threejs,
   python,
   angular,
   csharp,

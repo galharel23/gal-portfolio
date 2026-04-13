@@ -90,13 +90,16 @@ const Works = () => {
     <>
       <Header useMotion={true} {...config.sections.works} />
 
-      <div className="flex w-full">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]"
-        >
-          {config.sections.works.content}
-        </motion.p>
+      <div className="flex w-full flex-col gap-4">
+        {config.sections.works.content.split("\n\n").map((para, i) => (
+          <motion.p
+            key={i}
+            variants={fadeIn("", "", 0.1 + i * 0.1, 1)}
+            className="text-secondary max-w-3xl text-[17px] leading-[30px]"
+          >
+            {para}
+          </motion.p>
+        ))}
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
