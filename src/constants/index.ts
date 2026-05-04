@@ -34,6 +34,7 @@ import {
   idf,
   englishcoach,
   blockchain,
+  amiram,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -206,11 +207,33 @@ const projects: TProject[] = [
         color: "green-text-gradient",
       },
       {
-        name: "Python",
+        name: "Vector DB",
         color: "pink-text-gradient",
       },
     ],
     image: englishcoach,
+    underDevelopment: true,
+  },
+  {
+    name: "Amiram Exam Preparation",
+    description:
+      "Application designed to streamline Amiram exam preparation by systematically scraping official word banks and generating dynamic practice materials.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Web Scraping",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: amiram,
+    imageContain: true,
     sourceCodeLink: "https://github.com/galharel23/EnglishCoach",
     liveLink: "https://main.d1z8ztoexs4c9s.amplifyapp.com/",
   },
@@ -228,13 +251,17 @@ const projects: TProject[] = [
         color: "green-text-gradient",
       },
       {
-        name: "WebSockets",
+        name: "AWS",
         color: "pink-text-gradient",
+      },
+      {
+        name: "multiplayer",
+        color: "blue-text-gradient",
       },
     ],
     image: blockchain,
     sourceCodeLink: "https://github.com/galharel23/amm-game",
-    liveLink: "amm-experiment-bgu.com",
+    liveLink: "http://amm-experiment-bgu.com/",
   },
 ];
 

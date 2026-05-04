@@ -36,6 +36,7 @@ import idf from "./company/idf.png";
 
 import englishcoach from "./englishcoach.png";
 import blockchain from "./blockchain.png";
+import amiram from "./amiram.png";
 
 export {
   logo,
@@ -73,4 +74,5 @@ export {
   idf,
   englishcoach,
   blockchain,
+  amiram,
 };
